@@ -1,0 +1,96 @@
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    background: white;
+    color: black;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background: lightseagreen;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+footer {
+    background: lightseagreen;
+    color: black;
+    text-align: center;
+    padding: 20px;
+}
+
+.cards {
+    display: flex;              /* Flexbox for card layout */
+    flex-wrap: wrap;            /* Allow cards to wrap */
+    gap: 1.5rem;                /* Space between cards */
+    justify-content: center;    /* Center cards in the container */          
+}
+
+.card {
+    background: white;
+    border-radius: 8px;          /* Rounded corners */
+    padding: 1.5rem;            /* Padding inside the card */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    width: 250px;
+    text-align: center;         /* Center text inside the card */
+}
+
+/* Using Flexbox for layout */
+.container {
+    display: flex;               /* Flexbox enabled for layout */
+    flex-wrap: wrap;             /* Allow items to wrap to the next line */
+    gap: 20px;                   /* Space between items */
+    padding: 20px;               /* Padding around the container */
+    justify-content: center;     /* Center items horizontally */
+}
+
+/* Using CSS Grid to create responsive layout */
+.grid {
+    display: grid;              /* Grid layout enabled */
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive columns */
+    gap: 1rem;                  /* Space between grid items */
+    padding: 20px;              /* Padding around the grid */
+    justify-content: center;    
+    max-width: 600px;           /* Maximum width for the grid */
+    margin: 2rem auto;          /* Center the grid in the container */
+}
+
+.box {
+    background: white;
+    border: 1px solid #ddd;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;          /* Rounded corners */
+
+}
+
+/* For tablets and smaller screens */
+@media (max-width: 768px) {
+    header, footer {
+        padding: 15px;           /* Reduced padding for smaller screens */
+    }
+}
+.container {
+    flex-direction: column;      /* Stack flex items vertically */
+}
+
+/* For mobile devices */
+@media (max-width: 480px) {
+    header, footer {
+        font-size: 14px;       /* Smaller font size for mobile */
+    }
+    .box {
+        font-size: 14px;
+        padding: 15px;         /* Reduced padding for smaller boxes */
+    }
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
